@@ -126,6 +126,10 @@
       if(finish <=1 ){
         document.querySelector(".showresult").innerHTML = `
           <h2>Fin du jeu! Score final ${score}</h2>
+          <form style="width: 400px; padding: 10px;" method="POST" action="/party/create">
+            <input type="hidden" name="score" value="${score}" />
+            <button type="submit" style="margin: 10px;" type="button" class="btn btn-primary btn-lg">Sauvegarder</button>
+          </form>
           <button class="button-9" role="button" onclick={window.history.go(-1)}>Recommencer</button> 
         `;
       }

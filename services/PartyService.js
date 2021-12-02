@@ -1,11 +1,15 @@
-const partyDAO = require('../dao/PartyDAO');
+const partyDAO = require("../dao/PartyDAO");
 
 module.exports = {
-    list: (category, nbq) => {
-        return partyDAO.list(category, nbq);
-    },
+  list: (category, nbq) => {
+    return partyDAO.list(category, nbq);
+  },
 
-    create: (body) => {
-        return partyDAO.create(body);
-    },
-}
+  show: (id) => {
+    return partyDAO.show(id);
+  },
+
+  create: (body) => {
+    return partyDAO.create(body);
+  },
+};
